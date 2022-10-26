@@ -1,16 +1,18 @@
 import { render, screen } from '@testing-library/react';
-import { Header } from './header';
+import { Layout } from './layout';
 import { MemoryRouter as Router } from 'react-router-dom';
 
-describe('Given Header component', () => {
+describe('Given Layout component', () => {
     describe('When we render the component', () => {
-        test('Then it should display "Learning React"', () => {
+        test('Then it should display...', () => {
             render(
                 <Router>
-                    <Header />
+                    <Layout>
+                        <p>Testing Layout</p>
+                    </Layout>
                 </Router>
             );
-            const element = screen.getByText(/Learning React/i); // Expresion regular
+            const element = screen.getByText(/Testing Layout/i); // Expresion regular
             expect(element).toBeInTheDocument();
         });
     });
