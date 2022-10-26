@@ -1,0 +1,10 @@
+.footer {
+    min-height: 10vh;
+    padding-block: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(104, 59, 146);
+    color: bisque;
+}
