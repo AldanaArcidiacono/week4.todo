@@ -24,11 +24,11 @@ describe('Given TaskApi service', () => {
             expect(fetch).toHaveBeenCalled();
             expect(result).toEqual(mockTask);
         });
-        test('Then if we use deleteTask it should...', async () => {
-            await service.deleteTask(1);
-        });
-        test('Then if we use updateTas it should...', async () => {
-            await service.updateTask(1, { isComplete: true });
-        });
+        // test('Then if we use deleteTask it should...', async () => {
+        //     await service.deleteTask(1);
+        // });
+        // test('Then if we use updateTas it should...', async () => {
+        //     await service.updateTask(1, { isComplete: true });
+        // });
     });
 });

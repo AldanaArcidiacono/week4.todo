@@ -7,19 +7,25 @@ describe('Given storage service', () => {
         beforeEach(() => {
             service = new Store();
         });
-        test('Then if localStorage have data we use getStorage it should...', () => {
-            Storage.prototype.getItem = jest.fn().mockReturnValue("['test']");
+        test(`Then if localStorage have data 
+                and I use service.getStore() 
+                it should call localStorage.getItem
+                and return de data`, () => {
+            Storage.prototype.getItem = jest.fn().mockReturnValue('["test"]');
             const result = service.getStore();
             expect(localStorage.getItem).toHaveBeenCalled();
             expect(result).toEqual(['test']);
         });
-        test('Then if localStorage does not have data we use getStorage it should...', () => {
+        test(`Then if localStorage have not data  
+            and I use  service.getStore() 
+            it should call localStorage.getItem
+            and return []`, () => {
             Storage.prototype.getItem = jest.fn();
             const result = service.getStore();
             expect(localStorage.getItem).toHaveBeenCalled();
             expect(result).toEqual([]);
         });
-        test('Then if we use setStorage it should...', () => {
+        test('Then if I use setStore it should ...', () => {
             Storage.prototype.setItem = jest.fn();
             service.setStore([]);
             expect(localStorage.setItem).toHaveBeenCalled();
