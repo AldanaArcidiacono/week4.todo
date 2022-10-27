@@ -1,5 +1,12 @@
-function ToDoPage() {
-    return <h2>ToDo page</h2>;
+import { TaskList } from '../components/task.list/task.list';
+
+function TodoPage() {
+    return (
+        <main>
+            <h2>Todo page</h2>
+            <TaskList></TaskList>
+        </main>
+    );
 }
 
-export default ToDoPage;
+export default TodoPage;

@@ -7,6 +7,7 @@ export const getStore = (): Array<Task> => {
     if (!dataString) return [];
     return JSON.parse(dataString);
 };
+
 export const setStore = (data: Array<Task>) => {
     localStorage.setItem(store, JSON.stringify(data));
 };

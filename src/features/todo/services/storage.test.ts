@@ -1,7 +1,7 @@
 import { Task } from '../models/task';
 import { Store } from './storage';
 
-describe('Given storage service', () => {
+describe('Given Storage Service', () => {
     describe('When we instantiate it', () => {
         let service: Store<Task>;
         beforeEach(() => {
