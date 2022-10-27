@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import HomePage from '../../../share/home/page/home.page';
-import ToDoPage from '../../../share/todo/page/todo.page';
+import ToDoPage from '../../features/todo/page/todo.page';
+import HomePage from '../../share/home/page/home.page';
 
 export function AppRoutes() {
     return (
