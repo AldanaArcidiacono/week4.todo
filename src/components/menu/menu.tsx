@@ -5,6 +5,7 @@ export function Menu() {
     const menuOptions = [
         { id: '1', path: '', label: 'Inicio' },
         { id: '2', path: 'todo', label: 'Tareas' },
+        { id: '3', path: 'todoFlux', label: 'TareasFlux' },
     ];
     return (
         <nav>
