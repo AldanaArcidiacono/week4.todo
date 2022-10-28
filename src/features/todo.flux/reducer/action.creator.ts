@@ -12,7 +12,7 @@ export const f = () => {
 };
 f(); // Me devuelve el objeto
 
-type Action = {
+export type Action = {
     type: string;
     payload?: Array<Task> | Task;
 };
