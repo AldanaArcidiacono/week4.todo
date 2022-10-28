@@ -1,13 +1,15 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter as Router } from 'react-router-dom';
+import { Task } from '../../models/task';
 import { TaskItem } from './task.item';
 
 describe('Given TaskItem component', () => {
     describe('When we render the component', () => {
         beforeEach(() => {
+            const mockTask = new Task('', '');
             render(
                 <Router>
-                    <TaskItem />
+                    <TaskItem item={mockTask} />
                 </Router>
             );
         });

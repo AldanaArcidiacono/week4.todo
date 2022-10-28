@@ -1,10 +1,16 @@
 import { createContext } from 'react';
-import { Task } from '../../../features/todo/models/task';
+import { ITask, Task } from '../../../features/todo/models/task';
 
 const initialContext: {
-    task: Array<Task>;
+    tasks: Array<Task>;
+    handleAdd: (newTask: ITask) => void;
+    handlerEraser: (deletedID: number) => void;
+    handlerComplete: (task: Task) => void;
 } = {
-    task: [],
+    tasks: [],
+    handleAdd: () => undefined,
+    handlerEraser: () => undefined,
+    handlerComplete: () => undefined,
 };
 
 export const TodoContext = createContext(initialContext);

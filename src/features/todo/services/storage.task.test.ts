@@ -1,14 +1,14 @@
 import { getStore, setStore } from './storage.task';
 
-describe('Given storage service', () => {
+describe('Given Storage Service', () => {
     describe('When we use getStore', () => {
-        test('Then it should...', () => {
+        test('Then it should ...', () => {
             getStore();
         });
     });
 
     describe('When we use setStore', () => {
-        test('Then it should...', () => {
+        test('Then if I use setStore it should ...', () => {
             setStore([]);
         });
     });
